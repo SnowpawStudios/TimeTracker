@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using TimeTracker.API.Repositories;
-using TimeTracker.API.Services;
-using TimeTracker.Shared.Entities;
-using TimeTracker.Shared.Models.TimeEntry;
+﻿using Microsoft.AspNetCore.Mvc;
+
 
 namespace TimeTracker.API.Controllers
 {

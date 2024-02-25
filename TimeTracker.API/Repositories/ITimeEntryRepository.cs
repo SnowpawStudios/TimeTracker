@@ -1,4 +1,4 @@
-﻿using TimeTracker.Shared.Entities;
+﻿
 
 namespace TimeTracker.API.Repositories
 {
