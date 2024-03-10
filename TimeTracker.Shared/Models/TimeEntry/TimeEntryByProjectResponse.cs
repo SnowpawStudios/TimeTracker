@@ -7,6 +7,6 @@ using System.Threading.Tasks;
 
 namespace TimeTracker.Shared.Models.TimeEntry
 {
-    public record struct TimeEntryByProjectResponse(int id, DateTime Start, DateTime? End);
+    public record struct TimeEntryCreateRequest(int ProjectId, DateTime Start, DateTime? End);
     
 }

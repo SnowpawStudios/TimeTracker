@@ -14,6 +14,8 @@ builder.Services.AddDbContext<DataContext>(options =>
 );
 builder.Services.AddScoped<ITimeEntryRepository, TimeEntryRepository>();
 builder.Services.AddScoped<ITimeEntryService, TimeEntryService>();
+builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<IProjectService, ProjectService>();
 
 var app = builder.Build();
 
@@ -24,6 +26,8 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     app.UseSwaggerUI();
 }
 
+ConfigureMapster();
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -31,3 +35,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+void ConfigureMapster()
+{
+
+}
