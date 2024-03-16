@@ -1,8 +1,9 @@
-﻿
+﻿@inject HttpClient Http
+
 @inject HttpClient  Http
 
 @if (showDetails)
-{
+    {
     <hr />
     <p>
         Project: @project.Name<br/>
@@ -11,7 +12,7 @@
         End: @project.EndDate<br/>
 
     </p>
-}
+    }
 
 @code {
     [Parameter]

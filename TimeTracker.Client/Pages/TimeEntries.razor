@@ -15,7 +15,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var timeEntry in timeEntries)
+        @foreach (var timeEntry in timeEntries)
         {
             <tr>
                 <td>@timeEntry.Start</td>
@@ -33,6 +33,10 @@
         }
     </tbody>
 </table>
+@if (projectId > 0)
+{
+    <ProjectDetails ProjectId="projectId" />
+}
 
 @if(projectId > 0)
 {
@@ -47,7 +51,7 @@
     protected override async Task OnInitializedAsync()
     {
         var result = await Http.GetFromJsonAsync<List<TimeEntryResponse>>("api/timeentry");
-        if(result != null)
+        if (result != null)
         {
             timeEntries = result;
         }
@@ -56,7 +60,7 @@
 
     private string GetDuration(DateTime? start, DateTime? end)
     {
-        if(start != null && end != null)
+        if (start != null && end != null)
         {
             var duration = end.Value - start.Value;
             var result = $"{duration.Hours}h {duration.Minutes}m";
